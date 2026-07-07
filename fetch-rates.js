@@ -194,8 +194,10 @@ async function fetchCompa() {
   try {
     console.log('Fetching Compa...');
     
-    const buyResponse = await axios.get('https://www.compa.exchange/api/rates?direction=CAD-NGN&amount=1');
-    const sellResponse = await axios.get('https://www.compa.exchange/api/rates?direction=NGN-CAD&amount=1');
+    // Buy CAD (Give NGN, get CAD)
+    const buyResponse = await axios.get('https://www.compa.exchange/api/rates?direction=NGN-CAD&amount=1');
+    // Sell CAD (Give CAD, get NGN)
+    const sellResponse = await axios.get('https://www.compa.exchange/api/rates?direction=CAD-NGN&amount=1');
     
     const buyRatesList = buyResponse.data?.rates || [];
     const sellRatesList = sellResponse.data?.rates || [];
@@ -215,15 +217,16 @@ async function fetchCompa() {
       // Don't save recursive compa rates
       if (provider.includes('compa')) continue;
       
-      const buy = buyRates[provider] || null;
+      let buy = buyRates[provider] || null;
       let sell = sellRates[provider] || null;
       
-      // If sell rate is in CAD per NGN, take reciprocal
+      // If rate is in CAD per NGN, take reciprocal to get NGN per CAD
+      if (buy && buy < 1) buy = 1 / buy;
       if (sell && sell < 1) sell = 1 / sell;
       
       if (buy || sell) {
-        const finalBuy = buy || (sell - 50);
-        const finalSell = sell || (buy + 50);
+        const finalBuy = buy || (sell + 50);
+        const finalSell = sell || (buy - 50);
         await saveRate(`compa_${provider}`, finalBuy, finalSell);
       }
     }
