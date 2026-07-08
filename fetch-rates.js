@@ -213,9 +213,13 @@ async function fetchCompa() {
     }
 
     const allProviders = new Set([...Object.keys(buyRates), ...Object.keys(sellRates)]);
+    
+    // Blocklist for currency calculators or non-remittance providers that show unrealistic mid-market rates
+    const blocklist = ['xe', 'transfergo', 'google', 'oanda', 'bloomberg'];
+    
     for (const provider of allProviders) {
-      // Don't save recursive compa rates
-      if (provider.includes('compa')) continue;
+      // Don't save recursive compa rates or blocklisted providers
+      if (provider.includes('compa') || blocklist.includes(provider.toLowerCase())) continue;
       
       let buy = buyRates[provider] || null;
       let sell = sellRates[provider] || null;
