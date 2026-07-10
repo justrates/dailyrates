@@ -241,6 +241,95 @@ async function fetchCompa() {
   }
 }
 
+async function fetchTaptapSend() {
+  try {
+    console.log('Fetching TapTap Send...');
+    let browserArgs = { headless: true, args: ['--no-sandbox'] };
+    const browser = await puppeteer.launch(browserArgs);
+    const page = await browser.newPage();
+    
+    let buy = null;
+    let resolved = false;
+
+    page.on('response', async (response) => {
+      if (response.url().includes('fxRates')) {
+        try {
+          const data = await response.json();
+          const ca = data.availableCountries.find(c => c.isoCountryCode === 'CA');
+          const ng = ca?.corridors.find(c => c.isoCountryCode === 'NG');
+          if (ng && ng.fxRate) {
+            buy = parseFloat(ng.fxRate);
+            resolved = true;
+          }
+        } catch (e) {}
+      }
+    });
+
+    await page.goto('https://www.taptapsend.com/', { waitUntil: 'networkidle2', timeout: 45000 });
+    for (let i = 0; i < 40; i++) {
+      if (resolved) break;
+      await new Promise(r => setTimeout(r, 500));
+    }
+    await browser.close();
+
+    if (buy) {
+      // TapTap Send only does CAD to NGN (sell rate), so buy rate is estimated inverse or null.
+      // But based on standard mapping, CAD->NGN is sell. We just store it as sell and buy+80
+      let sell = buy;
+      let estimatedBuy = sell + 80;
+      await saveRate('taptap_send', estimatedBuy, sell);
+    }
+  } catch (error) {
+    console.error(`Taptap Send fetch failed: ${error.message}`);
+  }
+}
+
+async function fetchSendwave() {
+  try {
+    console.log('Fetching Sendwave...');
+    let browserArgs = { headless: true, args: ['--no-sandbox'] };
+    const browser = await puppeteer.launch(browserArgs);
+    const page = await browser.newPage();
+    
+    await page.goto('https://www.sendwave.com/en-ca/countries/nigeria', { waitUntil: 'networkidle2', timeout: 45000 });
+    await new Promise(r => setTimeout(r, 2000));
+    
+    const text = await page.evaluate(() => document.body.innerText);
+    const match = text.match(/1\s*CAD\s*=\s*([0-9.,]+)\s*NGN/i);
+    
+    if (match && match[1]) {
+      const rate = parseFloat(match[1].replace(/,/g, ''));
+      // Sendwave CAD to NGN is a sell rate
+      await saveRate('sendwave', rate + 80, rate);
+    }
+    await browser.close();
+  } catch (error) {
+    console.error(`Sendwave fetch failed: ${error.message}`);
+  }
+}
+
+async function fetchRevve() {
+  try {
+    console.log('Fetching Revve...');
+    
+    // Sell CAD (Give CAD, get NGN)
+    const sellResponse = await axios.get('https://api-blog.revveme.com/blog/exchange-rates/check-rate?targetCurrency=NGN&baseCurrency=CAD&amount=1');
+    const sellData = sellResponse.data?.data?.[0];
+    const sell = sellData ? parseFloat(sellData.sellingRate) : null;
+    
+    // Buy CAD (Give NGN, get CAD)
+    const buyResponse = await axios.get('https://api-blog.revveme.com/blog/exchange-rates/check-rate?targetCurrency=CAD&baseCurrency=NGN&amount=1');
+    const buyData = buyResponse.data?.data?.[0];
+    const buy = buyData ? parseFloat(buyData.sellingRate) : null;
+    
+    if (sell || buy) {
+      await saveRate('revve', buy || (sell + 40), sell || (buy - 40));
+    }
+  } catch (error) {
+    console.error(`Revve fetch failed: ${error.message}`);
+  }
+}
+
 async function runAll() {
   console.log('Starting rates fetcher...');
   await Promise.allSettled([
@@ -249,6 +338,9 @@ async function runAll() {
     fetchAfrichange(),
     fetchYolat(),
     fetchPesa(),
+    fetchTaptapSend(),
+    fetchSendwave(),
+    fetchRevve(),
     fetchCompa()
   ]);
 
