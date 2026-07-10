@@ -1,27 +1,42 @@
 {
-  "cadremit": {
-    "buy_rate": 1012,
-    "sell_rate": 979,
-    "updated_at": "2026-07-10T03:47:12.494Z"
-  },
   "pesa": {
     "buy_rate": 1039.9999999999584,
     "sell_rate": 978,
-    "updated_at": "2026-07-10T03:47:12.646Z"
+    "updated_at": "2026-07-10T04:53:21.104Z"
   },
   "lemfi": {
     "buy_rate": 1054.7,
     "sell_rate": 973,
-    "updated_at": "2026-07-10T03:47:12.678Z"
+    "updated_at": "2026-07-10T04:53:21.156Z"
   },
   "yolat": {
     "buy_rate": 1010,
     "sell_rate": 976,
-    "updated_at": "2026-07-10T03:47:12.840Z"
+    "updated_at": "2026-07-10T04:53:21.289Z"
+  },
+  "cadremit": {
+    "buy_rate": 1012,
+    "sell_rate": 979,
+    "updated_at": "2026-07-10T04:53:21.306Z"
+  },
+  "revve": {
+    "buy_rate": 1002,
+    "sell_rate": 980,
+    "updated_at": "2026-07-10T04:53:22.763Z"
+  },
+  "taptap_send": {
+    "buy_rate": 1052,
+    "sell_rate": 972,
+    "updated_at": "2026-07-10T04:53:26.816Z"
   },
   "africhange": {
     "buy_rate": 1035,
     "sell_rate": 975,
-    "updated_at": "2026-07-10T03:47:15.700Z"
+    "updated_at": "2026-07-10T04:53:28.039Z"
+  },
+  "sendwave": {
+    "buy_rate": 1051.52,
+    "sell_rate": 971.52,
+    "updated_at": "2026-07-10T04:53:30.444Z"
   }
 }
