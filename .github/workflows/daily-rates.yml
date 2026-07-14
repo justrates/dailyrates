@@ -2,8 +2,8 @@ name: Daily FX Rates
 
 on:
   schedule:
-    # Runs at the start of every hour
-    - cron: '0 * * * *'
+    # Runs 5 minutes before the start of every hour (so data is fresh when backend fetches at xx:00)
+    - cron: '55 * * * *'
   workflow_dispatch: # Allows manual trigger
 
 permissions:
