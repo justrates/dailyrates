@@ -1,177 +1,177 @@
 {
-  "pesa": {
-    "buy_rate": 1054.999999999999,
-    "sell_rate": 992.5,
-    "updated_at": "2026-09-08T19:00:18.056Z"
-  },
-  "yolat": {
-    "buy_rate": 1020,
-    "sell_rate": 988,
-    "updated_at": "2026-09-08T19:00:18.089Z"
+  "lemfi": {
+    "buy_rate": 1062.04,
+    "sell_rate": 980,
+    "updated_at": "2026-09-08T22:02:54.523Z"
   },
   "cadremit": {
     "buy_rate": 1025,
     "sell_rate": 992,
-    "updated_at": "2026-09-08T19:00:18.195Z"
+    "updated_at": "2026-09-08T22:02:54.557Z"
   },
-  "lemfi": {
-    "buy_rate": 1062.04,
-    "sell_rate": 980,
-    "updated_at": "2026-09-08T19:00:18.451Z"
-  },
-  "compa_lemfi": {
-    "buy_rate": 1062.7000466419051,
-    "sell_rate": 980,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_pesa": {
-    "buy_rate": 1054.849983982103,
+  "pesa": {
+    "buy_rate": 1054.999999999999,
     "sell_rate": 992.5,
-    "updated_at": "2026-09-08T19:00:19.107Z"
+    "updated_at": "2026-09-08T22:02:54.595Z"
   },
-  "compa_africhange": {
-    "buy_rate": 1049.9999475000027,
-    "sell_rate": 991,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_qwid": {
-    "buy_rate": 1044.9320794148382,
-    "sell_rate": 989.75,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_cadremit": {
-    "buy_rate": 1024.9999538750021,
-    "sell_rate": 992,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_yousend": {
-    "buy_rate": 1022.579997967111,
+  "yolat": {
+    "buy_rate": 1020,
     "sell_rate": 988,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_korrency": {
-    "buy_rate": 1021.9999803776003,
-    "sell_rate": 994,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_payva": {
-    "buy_rate": 1021.0000307321009,
-    "sell_rate": 991,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_yolat": {
-    "buy_rate": 1019.999955120002,
-    "sell_rate": 988,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_expedier": {
-    "buy_rate": 1017.9999700708009,
-    "sell_rate": 991,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_quickcollects": {
-    "buy_rate": 1014.9999741175008,
-    "sell_rate": 985,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_revveme": {
-    "buy_rate": 1011.9999923088002,
-    "sell_rate": 986,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_paper": {
-    "buy_rate": 1010.9799499423386,
-    "sell_rate": 993,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_dahabshiil": {
-    "buy_rate": 1045.8,
-    "sell_rate": 995.8,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_wise": {
-    "buy_rate": 1043.02,
-    "sell_rate": 993.02,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_paysend": {
-    "buy_rate": 1036.4299999999998,
-    "sell_rate": 986.43,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_veloremit": {
-    "buy_rate": 1036.1,
-    "sell_rate": 986.1,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_remitly": {
-    "buy_rate": 1034.15,
-    "sell_rate": 984.15,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_taptap_send": {
-    "buy_rate": 1033,
-    "sell_rate": 983,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_sendwave": {
-    "buy_rate": 1032.44,
-    "sell_rate": 982.44,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_worldremit": {
-    "buy_rate": 1032.4299999999998,
-    "sell_rate": 982.43,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_profee": {
-    "buy_rate": 1029.23,
-    "sell_rate": 979.23,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_moneygram": {
-    "buy_rate": 1025.1,
-    "sell_rate": 975.1,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_remitbee": {
-    "buy_rate": 1024.2,
-    "sell_rate": 974.2,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_ria": {
-    "buy_rate": 1007.28,
-    "sell_rate": 957.28,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_instarem": {
-    "buy_rate": 1000.77,
-    "sell_rate": 950.77,
-    "updated_at": "2026-09-08T19:00:19.107Z"
-  },
-  "compa_western_union": {
-    "buy_rate": 997.86,
-    "sell_rate": 947.86,
-    "updated_at": "2026-09-08T19:00:19.107Z"
+    "updated_at": "2026-09-08T22:02:55.055Z"
   },
   "revve": {
     "buy_rate": 1012,
     "sell_rate": 991,
-    "updated_at": "2026-09-08T19:00:19.542Z"
+    "updated_at": "2026-09-08T22:02:55.685Z"
+  },
+  "compa_lemfi": {
+    "buy_rate": 1062.7000466419051,
+    "sell_rate": 980,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_pesa": {
+    "buy_rate": 1054.849983982103,
+    "sell_rate": 992.5,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_africhange": {
+    "buy_rate": 1049.9999475000027,
+    "sell_rate": 991,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_qwid": {
+    "buy_rate": 1044.9300048411608,
+    "sell_rate": 989.45,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_cadremit": {
+    "buy_rate": 1024.9999538750021,
+    "sell_rate": 992,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_yousend": {
+    "buy_rate": 1022.579997967111,
+    "sell_rate": 988,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_korrency": {
+    "buy_rate": 1021.9999803776003,
+    "sell_rate": 994,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_payva": {
+    "buy_rate": 1021.0000307321009,
+    "sell_rate": 991,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_yolat": {
+    "buy_rate": 1019.999955120002,
+    "sell_rate": 988,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_expedier": {
+    "buy_rate": 1017.9999700708009,
+    "sell_rate": 991,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_quickcollects": {
+    "buy_rate": 1014.9999741175008,
+    "sell_rate": 985,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_revveme": {
+    "buy_rate": 1011.9999923088002,
+    "sell_rate": 986,
+    "updated_at": "2026-09-08T22:02:56.666Z"
+  },
+  "compa_paper": {
+    "buy_rate": 1010.9799499423386,
+    "sell_rate": 993,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_dahabshiil": {
+    "buy_rate": 1045.6,
+    "sell_rate": 995.6,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_wise": {
+    "buy_rate": 1043.8,
+    "sell_rate": 993.8,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_paysend": {
+    "buy_rate": 1036.24,
+    "sell_rate": 986.24,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_veloremit": {
+    "buy_rate": 1036.1,
+    "sell_rate": 986.1,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_remitly": {
+    "buy_rate": 1034.6100000000001,
+    "sell_rate": 984.61,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_taptap_send": {
+    "buy_rate": 1033,
+    "sell_rate": 983,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_sendwave": {
+    "buy_rate": 1032.3200000000002,
+    "sell_rate": 982.32,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_worldremit": {
+    "buy_rate": 1032.29,
+    "sell_rate": 982.29,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_profee": {
+    "buy_rate": 1028.54,
+    "sell_rate": 978.54,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_moneygram": {
+    "buy_rate": 1025.1,
+    "sell_rate": 975.1,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_remitbee": {
+    "buy_rate": 1024.15,
+    "sell_rate": 974.15,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_ria": {
+    "buy_rate": 1007.28,
+    "sell_rate": 957.28,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_instarem": {
+    "buy_rate": 1000.73,
+    "sell_rate": 950.73,
+    "updated_at": "2026-09-08T22:02:56.667Z"
+  },
+  "compa_western_union": {
+    "buy_rate": 997.86,
+    "sell_rate": 947.86,
+    "updated_at": "2026-09-08T22:02:56.667Z"
   },
   "taptap_send": {
     "buy_rate": 1061,
     "sell_rate": 981,
-    "updated_at": "2026-09-08T19:00:26.694Z"
+    "updated_at": "2026-09-08T22:02:57.976Z"
   },
   "africhange": {
     "buy_rate": 1050,
     "sell_rate": 991,
-    "updated_at": "2026-09-08T19:00:27.209Z"
+    "updated_at": "2026-09-08T22:03:00.134Z"
   },
   "sendwave": {
-    "buy_rate": 1062.74,
-    "sell_rate": 982.74,
-    "updated_at": "2026-09-08T19:00:29.458Z"
+    "buy_rate": 1062.76,
+    "sell_rate": 982.76,
+    "updated_at": "2026-09-08T22:03:02.669Z"
   }
 }
